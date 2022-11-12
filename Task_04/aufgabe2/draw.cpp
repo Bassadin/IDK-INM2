@@ -5,6 +5,11 @@
 #include "../lib/tile.h" // struct tile, loadPngTile
 
 #include <thread>
+#include <iostream>
+#include "var.h"
+
+int kmhDashboardValue = 20;
+int rpmDashboardValue = 1000;
 
 GLfloat kmh2deg(GLfloat kmh)
 {
@@ -48,6 +53,7 @@ GLfloat rpm2deg(GLfloat rpm)
 
 int draw_main()
 {
+
 	// OpenGL ES initialisieren
 	struct opengles opengles;
 	glesInitialize(&opengles);
@@ -70,13 +76,14 @@ int draw_main()
 		glPushMatrix();
 
 		GLfloat needleHeightOffset = 256.0 / 512.0;
-		GLfloat speedKmh = 120;
 
 		glTranslatef(0.8, 0.155, 0);
-		glRotatef(kmh2deg(speedKmh), 0, 0, 1);
+		glRotatef(kmh2deg(kmhDashboardValue), 0, 0, 1);
 		glTranslatef(0, needleHeightOffset, 0);
 
 		tileDraw(&needle);
+
+		std::cout << "kmhDashboardValue: " << kmhDashboardValue << std::endl;
 
 		glPopMatrix();
 
@@ -84,10 +91,8 @@ int draw_main()
 
 		glPushMatrix();
 
-		GLfloat speedRpm = 5000;
-
 		glTranslatef(-0.8, 0.155, 0);
-		glRotatef(rpm2deg(speedRpm), 0, 0, 1);
+		glRotatef(rpm2deg(rpmDashboardValue), 0, 0, 1);
 		glTranslatef(0, needleHeightOffset, 0);
 		tileDraw(&needle);
 
@@ -96,7 +101,7 @@ int draw_main()
 		// ---- Das gezeichnete Bild sichtbar machen ----------------
 		glesDraw(&opengles);
 
-		std::this_thread::sleep_for(std::chrono::milliseconds(25));
+		std::this_thread::sleep_for(std::chrono::milliseconds(200));
 	} while (glesRun(&opengles));
 
 	// OpenGL ES Ressourcen freigeben.
