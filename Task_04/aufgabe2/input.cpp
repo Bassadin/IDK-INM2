@@ -38,7 +38,7 @@ int input_main()
             // int value;
             // memcpy(&value, entry.data, sizeof(int));
 
-            std::cout << value << std::endl;
+            std::cout << entry.data << std::endl;
 
             // Daten könnten hier nun an draw.cpp "gesendet" werden, sie sind jedoch unlesbar, da Binärformat
             // So könnten sie aktualisiert werden
