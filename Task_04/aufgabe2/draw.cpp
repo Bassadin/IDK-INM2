@@ -83,8 +83,6 @@ int draw_main()
 
 		tileDraw(&needle);
 
-		std::cout << "kmhDashboardValue: " << kmhDashboardValue << std::endl;
-
 		glPopMatrix();
 
 		// ---- Linke Tachonadel zeichnen ---------------------------
