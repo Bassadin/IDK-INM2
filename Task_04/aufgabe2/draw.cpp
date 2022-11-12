@@ -1,5 +1,5 @@
-#include <stdio.h>	// printf, fprintf
-#include <math.h>	// z.B. M_PI, cos(), sin()
+#include <stdio.h> // printf, fprintf
+#include <math.h>  // z.B. M_PI, cos(), sin()
 #include <GL/glut.h>
 #include "../lib/gles.h" // struct opengles, gles*-Funktionen
 #include "../lib/tile.h" // struct tile, loadPngTile
@@ -46,7 +46,8 @@ GLfloat rpm2deg(GLfloat rpm)
 	return zeroAngle - (percentageValue * difference);
 }
 
-int draw_main() {
+int draw_main()
+{
 	// OpenGL ES initialisieren
 	struct opengles opengles;
 	glesInitialize(&opengles);
@@ -72,7 +73,7 @@ int draw_main() {
 		GLfloat speedKmh = 120;
 
 		glTranslatef(0.8, 0.155, 0);
-		glRotatef(kmh2deg(speedKmh),0, 0, 1);
+		glRotatef(kmh2deg(speedKmh), 0, 0, 1);
 		glTranslatef(0, needleHeightOffset, 0);
 
 		tileDraw(&needle);

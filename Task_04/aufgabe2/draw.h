@@ -2,7 +2,7 @@
 #ifndef DRAW_H
 #define DRAW_H
 
-#include <EGL/egl.h>   // EGL Datentypen und Funktionen
+#include <EGL/egl.h> // EGL Datentypen und Funktionen
 #include <GL/glut.h>
 
 GLfloat kmh2deg(GLfloat kmh);
