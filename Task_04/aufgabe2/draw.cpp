@@ -1,10 +1,12 @@
-#include <GL/glut.h>
-
 #include <stdio.h>	// printf, fprintf
-#include <stdlib.h> // exit
-#include <unistd.h> // sleep
+#include <math.h>	// z.B. M_PI, cos(), sin()
+#include <GL/glut.h>
+#include "../lib/gles.h" // struct opengles, gles*-Funktionen
+#include "../lib/tile.h" // struct tile, loadPngTile
 
-static GLfloat kmh2deg(GLfloat kmh)
+#include <thread>
+
+GLfloat kmh2deg(GLfloat kmh)
 {
 	GLfloat minKmh = 0;
 	GLfloat maxKmh = 150;
@@ -24,7 +26,7 @@ static GLfloat kmh2deg(GLfloat kmh)
 	return zeroAngle - (percentageValue * difference);
 }
 
-static GLfloat rpm2deg(GLfloat rpm)
+GLfloat rpm2deg(GLfloat rpm)
 {
 	GLfloat minRpm = 0;
 	GLfloat maxRpm = 7000;

@@ -19,6 +19,8 @@
 #include <chrono>
 #include <thread>
 
+#include "./draw.h"
+
 int main(void)
 {
 	// OpenGL ES initialisieren
