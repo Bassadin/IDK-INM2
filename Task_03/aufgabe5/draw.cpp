@@ -13,9 +13,11 @@
 #include <GL/glut.h> 
 
 #include "dashboard.h"
-#include "gles.h"
-#include "tile.h"
+#include "../lib/gles.h"
+#include "../lib/tile.h"
 #include "draw.h"
+
+#include <iostream>
 
 // --------------------------------------------------------------------------
 //  Hilfsfunktionen
@@ -131,8 +133,7 @@ void* draw_main(void *data)
 	GLfloat kmhdeg = 0.0;
 	GLfloat tempdeg = 0.0;
 	GLfloat fueldeg = 0.0;
-	do
-	{
+	do{
 		kmhdeg = filter(kmh2deg(db->kmh), &kmhdeg);
 		rpmdeg = filter(rpm2deg(db->rpm), &rpmdeg);
 		tempdeg = filter(temp2deg(db->temp), &tempdeg);
