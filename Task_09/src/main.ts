@@ -13,7 +13,7 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
 `;
 
 // Get the items display element
-const itemsDisplay = document.getElementById("items-display");
+const itemsDisplayElement = document.getElementById("items-display");
 
 // Get switch-button elements and add click event listeners
 
@@ -26,7 +26,32 @@ Array.from(document.getElementsByClassName("switch-button")).forEach(
             // print it
             console.log("button role is " + buttonRole);
 
-            itemsDisplay!.innerHTML = buttonRole;
+            itemsDisplayElement!.innerHTML = buttonRole;
+
+            let xsltProcessor = new XSLTProcessor();
+
+            // Load the xslt file, example1.xsl
+            let styleRequest = new XMLHttpRequest();
+            styleRequest.open("GET", `styles/${buttonRole}.xsl`, false);
+            styleRequest.send(null);
+
+            let xslStylesheet = styleRequest.responseXML;
+
+            xsltProcessor.importStylesheet(xslStylesheet!);
+
+            // Load the XML file, example1.xml
+            let dataRequest = new XMLHttpRequest();
+            dataRequest.open("GET", "data/data.xml", false);
+            dataRequest.send(null);
+
+            let xmlDataDoc = dataRequest.responseXML;
+
+            const fragment = xsltProcessor.transformToFragment(
+                xmlDataDoc!,
+                document
+            );
+            itemsDisplayElement!.textContent = "";
+            itemsDisplayElement!.appendChild(fragment);
         });
     }
 );
