@@ -1,23 +1,32 @@
 import "./style.scss";
-import typescriptLogo from "./typescript.svg";
-import { setupCounter } from "./counter";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
-    <a href="https://vitejs.dev" target="_blank">
-    <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-    <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-    <button id="counter" type="button"></button>
+    <button class="switch-button" id="show-simple" type="button">Simple</button>
+    <button class="switch-button" id="show-table" type="button">Table</button>
+    <button class="switch-button" id="show-fancy" type="button">Fancy</button>
+
+
+    <div id="items-display">
     </div>
-    <p class="read-the-docs">
-    Click on the Vite and TypeScript logos to learn more
-    </p>
   </div>
 `;
 
-setupCounter(document.querySelector<HTMLButtonElement>("#counter")!);
+// Get the items display element
+const itemsDisplay = document.getElementById("items-display");
+
+// Get switch-button elements and add click event listeners
+
+Array.from(document.getElementsByClassName("switch-button")).forEach(
+    (eachButton) => {
+        eachButton.addEventListener("click", () => {
+            // Get the button role from the id
+            const buttonRole = eachButton.id.split("-")[1];
+
+            // print it
+            console.log("button role is " + buttonRole);
+
+            itemsDisplay!.innerHTML = buttonRole;
+        });
+    }
+);
