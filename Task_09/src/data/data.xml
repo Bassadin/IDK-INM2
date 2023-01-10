@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addresses>
+  <address>
+    <name>John</name>
+    <surname>Doe</surname>
+    <street>Main Street</street>
+    <houseNumber>1</houseNumber>
+    <PLZ>12345</PLZ>
+    <city>Anytown</city>
+    <telephoneNumber>+1 (555) 555-5555</telephoneNumber>
+    <email>johndoe@example.com</email>
+    <birthday>1980-01-01</birthday>
+  </address>
+  <address>
+    <name>Jane</name>
+    <surname>Doe</surname>
+    <street>Second Street</street>
+    <houseNumber>2</houseNumber>
+    <PLZ>54321</PLZ>
+    <city>Anytown</city>
+    <telephoneNumber>+1 (555) 555-5556</telephoneNumber>
+    <email>janedoe@example.com</email>
+    <birthday>1985-02-14</birthday>
+  </address>
+  <address>
+    <name>Bob</name>
+    <surname>Smith</surname>
+    <street>Third Street</street>
+    <houseNumber>3</houseNumber>
+    <PLZ>67890</PLZ>
+    <city>Anothertown</city>
+    <telephoneNumber>+1 (555) 555-5557</telephoneNumber>
+    <email>bobsmith@example.com</email>
+    <birthday>1990-03-21</birthday>
+  </address>
+  <address>
+    <name>Alice</name>
+    <surname>Johnson</surname>
+    <street>Fourth Street</street>
+    <houseNumber>4</houseNumber>
+    <PLZ>09876</PLZ>
+    <city>Anothertown</city>
+    <telephoneNumber>+1 (555) 555-5558</telephoneNumber>
+    <email>alicejohnson@example.com</email>
+    <birthday>1995-04-28</birthday>
+  </address>
+  <address>
+    <name>Charlie</name>
+    <surname>Williams</surname>
+    <street>Fifth Street</street>
+    <houseNumber>5</houseNumber>
+    <PLZ>21098</PLZ>
+    <city>Smallville</city>
+    <telephoneNumber>+1 (555) 555-5559</telephoneNumber>
+    <email>charlie.williams@example.com</email>
+    <birthday>2000-05-15</birthday>
+  </address>
+</addresses>
