@@ -5,7 +5,7 @@
         <html>
             <body>
                 <xsl:for-each select="addresses/address">
-                    <div class="card">
+                    <div class="card" style="border: 1px solid red; margin: 1rem; padding: 1rem;">
                         <div class="card-header">
                             <h3>
                                 <xsl:value-of select="name"/>
@@ -31,10 +31,6 @@
                             <p>
                                 <b>Email:</b>
                                 <xsl:value-of select="email"/>
-                            </p>
-                            <p>
-                                <b>Birthday:</b>
-                                <xsl:value-of select="birthday"/>
                             </p>
                         </div>
                     </div>

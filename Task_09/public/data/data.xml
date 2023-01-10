@@ -10,6 +10,7 @@
     <telephoneNumber>+1 (555) 555-5555</telephoneNumber>
     <email>johndoe@example.com</email>
     <birthday>1980-01-01</birthday>
+    <image>https://randomuser.me/api/portraits/men/27.jpg</image>
   </address>
   <address>
     <name>Jane</name>
@@ -21,6 +22,7 @@
     <telephoneNumber>+1 (555) 555-5556</telephoneNumber>
     <email>janedoe@example.com</email>
     <birthday>1985-02-14</birthday>
+    <image>https://randomuser.me/api/portraits/women/27.jpg</image>
   </address>
   <address>
     <name>Bob</name>
@@ -32,6 +34,7 @@
     <telephoneNumber>+1 (555) 555-5557</telephoneNumber>
     <email>bobsmith@example.com</email>
     <birthday>1990-03-21</birthday>
+    <image>https://randomuser.me/api/portraits/women/12.jpg</image>
   </address>
   <address>
     <name>Alice</name>
@@ -43,6 +46,7 @@
     <telephoneNumber>+1 (555) 555-5558</telephoneNumber>
     <email>alicejohnson@example.com</email>
     <birthday>1995-04-28</birthday>
+    <image>https://randomuser.me/api/portraits/men/2.jpg</image>
   </address>
   <address>
     <name>Charlie</name>
@@ -54,5 +58,6 @@
     <telephoneNumber>+1 (555) 555-5559</telephoneNumber>
     <email>charlie.williams@example.com</email>
     <birthday>2000-05-15</birthday>
+    <image>https://randomuser.me/api/portraits/women/42.jpg</image>
   </address>
 </addresses>

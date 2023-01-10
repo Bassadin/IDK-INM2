@@ -4,41 +4,28 @@
     <xsl:template match="/">
         <html>
             <body>
-                <xsl:for-each select="addresses/address">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3>
-                                <xsl:value-of select="name"/>
-                                <xsl:value-of select="surname"/>
-                            </h3>
-                        </div>
-                        <div class="card-body">
-                            <p>
-                                <b>Street:</b>
-                                <xsl:value-of select="street"/>
-                                <xsl:value-of select="houseNumber"/>
-                            </p>
-                            <p>
-                                <b>PLZ:</b>
-                                <xsl:value-of select="PLZ"/>
-                                <b>City:</b>
-                                <xsl:value-of select="city"/>
-                            </p>
-                            <p>
-                                <b>Telephone Number:</b>
+                <h2>Address List</h2>
+                <table border="1">
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Telephone Number</th>
+                    </tr>
+                    <xsl:for-each select="addresses/address">
+                        <tr>
+                            <td>
+                                <span>
+                                    <xsl:value-of select="name"/>
+                                </span>
+                                <span>
+                                    <xsl:value-of select="surname"/>
+                                </span>
+                            </td>
+                            <td>
                                 <xsl:value-of select="telephoneNumber"/>
-                            </p>
-                            <p>
-                                <b>Email:</b>
-                                <xsl:value-of select="email"/>
-                            </p>
-                            <p>
-                                <b>Birthday:</b>
-                                <xsl:value-of select="birthday"/>
-                            </p>
-                        </div>
-                    </div>
-                </xsl:for-each>
+                            </td>
+                        </tr>
+                    </xsl:for-each>
+                </table>
             </body>
         </html>
     </xsl:template>
